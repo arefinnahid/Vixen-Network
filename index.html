@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>
-   Vixen Plus
+   Blacked
   </title>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
 <style>
@@ -13,6 +13,10 @@
         padding: 24px;
         margin: 0;
         cursor: default;
+        user-select: none; /* Prevent text selection */
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
     }
     
     .section-title {
@@ -22,6 +26,7 @@
         margin: 30px 0 15px 0;
         padding-bottom: 8px;
         border-bottom: 1px solid #e0e0e0;
+        user-select: none;
     }
     
     .section-title:first-of-type {
@@ -52,6 +57,7 @@
         transition:
             background-color 0.25s ease,
             border-color 0.25s ease;
+        user-select: none;
     }
     
     /* Hover */
@@ -89,12 +95,14 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        user-select: none;
     }
     
     .icon {
         width: 20px;
         height: 20px;
         min-width: 20px;
+        user-select: none;
     }
     
     .menu {
@@ -102,6 +110,16 @@
         height: 18px;
         opacity: .8;
         min-width: 18px;
+        user-select: none;
+    }
+    
+    /* Prevent text selection on all interactive elements */
+    * {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
     }
 </style>
 </head>
